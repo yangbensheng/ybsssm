@@ -13,7 +13,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <!-- spring版本号 -->
-        <spring.version>4.1.7.RELEASE</spring.version>
+        <spring.version>4.3.7.RELEASE</spring.version>
         <!-- mybatis版本号 -->
         <mybatis.version>3.3.0</mybatis.version>
         <!-- mysql驱动版本号 -->
@@ -135,9 +135,24 @@
             <artifactId>commons-collections</artifactId>
             <version>3.2</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/javax.validation/validation-api -->
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>1.1.0.Final</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>5.2.1.Final</version>
+        </dependency>
+
+
     </dependencies>
 
-<!--    <build>
+ <!--   <build>
         <resources>
             <resource>
                 <directory>src/main/java</directory>

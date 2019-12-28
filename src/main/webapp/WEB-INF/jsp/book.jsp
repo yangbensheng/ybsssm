@@ -13,5 +13,7 @@
 <body>
     <h3>hello book</h3>
     ${requestScope.list}
+    ================================
+    ${requestScope.message}
 </body>
 </html>

@@ -8,4 +8,13 @@
         select * from book
     </select>
 
+    <update id="updateBookById">
+        update book set number = 11 where book_id = #{bookId}
+    </update>
+
+    <insert id="saveBook" parameterType="com.ybs.ssm.vo.book.BookVO">
+        insert into book ( NAME, number, create_time)
+        values (#{name}, #{number}, #{createTime})
+    </insert>
+
 </mapper>

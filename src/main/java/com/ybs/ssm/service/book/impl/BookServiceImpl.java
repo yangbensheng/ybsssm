@@ -7,6 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -22,5 +23,16 @@ public class BookServiceImpl implements BookService {
     public List<BookVO> queryBookList() {
         logger.error("BookServiceImpl using test error level");
         return bookDao.queryBookList();
+    }
+
+    @Override
+    @Transactional
+    public void updateBookById(Long id) {
+        bookDao.updateBookById(id);
+    }
+
+    @Override
+    public void saveBook(BookVO bookVO) {
+        bookDao.saveBook(bookVO);
     }
 }
